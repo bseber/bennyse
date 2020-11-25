@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+
+@layer base {
+  html {
+    font-size: 22px;
+  }
+
+  body {
+    font-family: Futura, apple-system, Roboto, sans-serif;
+  }
+
+  h1 {
+    @apply text-pink-600;
+    @apply text-3xl;
+    @apply mb-4;
+  }
+
+  [x-cloak] {
+    display: none;
+  }
+}
+
+@tailwind utilities;
+
+@layer utilities {
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .filter-blur {
+    backdrop-filter: blur(15px);
+  }
+}
