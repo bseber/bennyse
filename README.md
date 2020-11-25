@@ -1,3 +1,3 @@
 # bennyse
 
-just bennyse.de
+just https://bennyse.de
