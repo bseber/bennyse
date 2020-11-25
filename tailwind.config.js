@@ -1,5 +1,10 @@
+const production = process.env.NODE_ENV === "production";
+
 module.exports = {
-  purge: ["src/**/*.njk", "src/**/*.md", "src/**/*.html"],
+  purge: {
+    content: ["src/**/*.njk", "src/**/*.md", "src/**/*.html"],
+    enabled: production,
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {

@@ -21,11 +21,11 @@ jobs:
       - name: Build landingpage
         run: |
           npm run build
-          touch ./_site/.nojekyll
-          echo "bennyse.de" > ./_site/CNAME
+          touch ./dist/.nojekyll
+          echo "bennyse.de" > ./dist/CNAME
       - name: Deploy landingpage
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: _site
+          FOLDER: dist
