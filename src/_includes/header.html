@@ -30,7 +30,9 @@
         x-transition:leave-end="rotate-0 -translate-y-1"
       ></span>
     </button>
-    <div class="fixed left-0 right-0 h-24 bg-gradient-to-b from-gray-900"></div>
+    <div
+      class="fixed left-0 right-0 h-24 bg-gradient-to-b from-gray-900 pointer-events-none"
+    ></div>
   </div>
   <nav
     class="p-4 sm:static"
@@ -86,6 +88,6 @@
     class="italic text-xs text-gray-300 z-50 px-4"
     :class="{ 'py-4': true }"
   >
-    bennyse - eine odyssee
+    <a href="/"> bennyse - eine odyssee </a>
   </aside>
 </div>
