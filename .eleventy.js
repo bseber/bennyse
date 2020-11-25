@@ -6,6 +6,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setWatchThrottleWaitTime(1000);
 
   eleventyConfig.addPassthroughCopy({ static: "." });
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/alpinejs/dist/alpine.js": "js/alpine.js",
+  });
 
   eleventyConfig.setTemplateFormats(["md", "njk", "png"]);
 
