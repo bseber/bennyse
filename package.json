@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "npm run clean && snowpack dev",
     "build": "npm run clean && snowpack build",
-    "clean": "rimraf _site"
+    "clean": "rimraf _site dist"
   },
   "dependencies": {
     "@11ty/eleventy": "0.11.1",
