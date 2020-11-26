@@ -1,3 +1,5 @@
+const defaultConfig = require("tailwindcss/defaultConfig.js");
+
 const production = process.env.NODE_ENV === "production";
 
 module.exports = {
@@ -9,13 +11,13 @@ module.exports = {
   theme: {
     screens: {
       xs: "480px",
-      ...require("tailwindcss/defaultConfig.js").theme.screens,
+      ...defaultConfig.theme.screens,
     },
-    extend: {
-      fontSize: {
-        xxs: "0.6rem",
-      },
+    fontSize: {
+      xxs: "0.6rem",
+      ...defaultConfig.theme.fontSize,
     },
+    extend: {},
   },
   variants: {
     extend: {},
