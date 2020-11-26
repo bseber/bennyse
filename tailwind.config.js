@@ -7,10 +7,11 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
+    screens: {
+      xs: "480px",
+      ...require("tailwindcss/defaultConfig.js").theme.screens,
+    },
     extend: {
-      screens: {
-        xs: "480px",
-      },
       fontSize: {
         xxs: "0.6rem",
       },
