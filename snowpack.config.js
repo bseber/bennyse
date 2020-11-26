@@ -1,7 +1,7 @@
 module.exports = {
   mount: {
     _site: "/",
-    "src/css": "/",
+    static: "/",
   },
   plugins: [
     "@snowpack/plugin-optimize",

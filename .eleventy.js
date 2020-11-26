@@ -1,7 +1,6 @@
 const formatDate = require("date-fns/format");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ static: "." });
   eleventyConfig.addPassthroughCopy({
     "node_modules/alpinejs/dist/alpine.js": "js/alpine.js",
   });
