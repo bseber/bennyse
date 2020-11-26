@@ -11,6 +11,9 @@ module.exports = {
       screens: {
         xs: "480px",
       },
+      fontSize: {
+        xxs: "0.6rem",
+      },
     },
   },
   variants: {

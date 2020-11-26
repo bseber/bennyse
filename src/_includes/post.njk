@@ -1,6 +1,9 @@
 {% extends "_layout.njk" %} {% block content %}
 
 <article>
+  <small class="block mb-3 text-xxs text-gray-300 text-opacity-30"
+    >{{ date | date('dd.MM.yyyy') }}</small
+  >
   <h1>{{ pageTitle }}</h1>
   {{ content | safe }}
 </article>
