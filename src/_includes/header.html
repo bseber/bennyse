@@ -24,7 +24,7 @@
   </div>
   <nav
     class="p-4 sm:static"
-    :class="{ 'fixed inset-0': true, 'filter-blur': menu && !sm } "
+    :class="{ 'fixed inset-0': true, 'blurry-background': menu && !sm } "
     x-show="menu || sm"
     x-transition:enter="transition ease-in duration-100"
     x-transition:enter-start="opacity-0"

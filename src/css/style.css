@@ -21,14 +21,25 @@
   }
 }
 
+@layer components {
+  @supports (backdrop-filter: none) {
+    .blurry-background {
+      backdrop-filter: blur(15px);
+    }
+  }
+
+  @supports (not (backdrop-filter: none)) {
+    .blurry-background {
+      @apply bg-gray-900;
+      @apply bg-opacity-90 !important;
+    }
+  }
+}
+
 @tailwind utilities;
 
 @layer utilities {
   .no-scroll {
     overflow: hidden;
-  }
-
-  .filter-blur {
-    backdrop-filter: blur(15px);
   }
 }
