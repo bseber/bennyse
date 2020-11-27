@@ -8,7 +8,8 @@ meta:
   {% for post in collections.blogposts %}
   <article class="{{ 'pt-8 sm:pt-6' if not loop.first}} pb-4 sm:pb-6">
     <small class="block mb-3 text-xxs text-gray-300 text-opacity-30"
-      >{{ post.data.date | date('dd.MM.yyyy') }}</small
+      >{{ post.data.date | date('dd.MM.yyyy') }} | {{ post.templateContent |
+      readingTime }}</small
     >
     <h2 class="text-3xl mb-2">
       <a
@@ -18,7 +19,9 @@ meta:
       >
     </h2>
     {% if post.data.excerpt %}
-    <p class="mb-4 text-gray-400">{{ post.data.excerpt }}</p>
+    <p class="mb-4 text-gray-400">
+      {{ post.data.excerpt | markdownToHtml | safe }}
+    </p>
     {% endif %}
     <a
       href="{{ post.url }}"

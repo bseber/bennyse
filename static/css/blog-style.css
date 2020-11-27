@@ -1,0 +1,65 @@
+.blog-article {
+  h2 {
+    @apply text-pink-600;
+    @apply text-2xl;
+    @apply mt-8;
+    @apply mb-4;
+  }
+
+  p {
+    @apply my-4;
+  }
+
+  a {
+    @apply underline;
+  }
+  a:hover {
+    @apply text-gray-50;
+  }
+
+  blockquote {
+    @apply bg-opacity-50;
+    @apply bg-gray-900;
+  }
+
+  p > code {
+    @apply text-sm;
+    @apply bg-pink-800;
+    @apply bg-opacity-75;
+    @apply rounded-sm;
+  }
+
+  pre[class*="language-"] {
+    @apply my-4;
+  }
+
+  ul {
+    @apply list-outside;
+    @apply list-disc;
+    @apply mx-4;
+
+    > li {
+      @apply mb-1;
+    }
+
+    > li > ul {
+      @apply ml-5;
+    }
+  }
+
+  @screen sm {
+    ul {
+      @apply mx-0;
+
+      > li {
+      }
+
+      > li > ul {
+      }
+    }
+  }
+
+  .html-viewer pre::after {
+    content: attr("content");
+  }
+}
