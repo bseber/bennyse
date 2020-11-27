@@ -4,24 +4,24 @@ meta:
   title: bennyse
 ---
 
-<div class="">
+<div>
   {% for post in collections.blogposts %}
   <article class="{{ 'pt-8 sm:pt-6' if not loop.first}} pb-4 sm:pb-6">
     <small class="block mb-3 text-xxs text-gray-300 text-opacity-30"
       >{{ post.data.date | date('dd.MM.yyyy') }} | {{ post.templateContent |
       readingTime }}</small
     >
-    <h2 class="text-3xl mb-2">
+    <h2 class="text-3xl mb-4">
       <a
         href="{{ post.url }}"
-        class="bg-clip-text text-transparent bg-gradient-to-tr from-pink-700 to-pink-500"
+        class="block bg-clip-text text-transparent bg-gradient-to-tr from-pink-700 to-pink-500"
         >{{ post.data.pageTitle }}</a
       >
     </h2>
     {% if post.data.excerpt %}
-    <p class="mb-4 text-gray-400">
+    <div class="mb-2 text-gray-300">
       {{ post.data.excerpt | markdownToHtml | safe }}
-    </p>
+    </div>
     {% endif %}
     <a
       href="{{ post.url }}"
