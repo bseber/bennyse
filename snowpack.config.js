@@ -16,7 +16,6 @@ module.exports = {
     "@snowpack/plugin-postcss",
     ["@snowpack/plugin-run-script", { cmd: "eleventy", watch: "$1 --watch" }],
     ["@snowpack/plugin-run-script", { cmd: copyAlpineJs }],
-    "snowpack-plugin-cache-bust",
   ],
   devOptions: {
     port: 3000,
