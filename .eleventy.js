@@ -1,4 +1,5 @@
 const formatDate = require("date-fns/format");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const striptags = require("striptags");
 const markdown = require("markdown-it")();
@@ -20,6 +21,7 @@ function readingTime(article) {
 module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats(["md", "njk", "png"]);
 
+  eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
 
   eleventyConfig.addNunjucksAsyncFilter("date", function (
