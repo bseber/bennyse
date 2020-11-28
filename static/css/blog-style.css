@@ -46,20 +46,12 @@
       @apply ml-5;
     }
   }
+}
 
-  @screen sm {
+@screen sm {
+  .blog-article {
     ul {
       @apply mx-0;
-
-      > li {
-      }
-
-      > li > ul {
-      }
     }
-  }
-
-  .html-viewer pre::after {
-    content: attr("content");
   }
 }
