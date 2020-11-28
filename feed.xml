@@ -1,0 +1,387 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>bennyse.de</title>
+  <subtitle>Mein persönlicher Blog. Hauptsächlich Softwareentwicklungszeug.</subtitle>
+  <link href="https://bennyse.de/feed.xml" rel="self" />
+  <link href="https://bennyse.de" />
+  <updated>2020-11-27T00:00:00+00:00</updated>
+  <id>https://bennyse.de</id>
+  <author>
+    <name>Benjamin Seber</name>
+    <email>benjamin.seber@mailbox.org</email>
+  </author>
+   
+  <entry>
+    <title></title>
+    <link href="https://bennyse.de/blog/2020-11-27-webseiten-bauen-90er-edition/" />
+    <updated>2020-11-27T00:00:00+00:00</updated>
+    <id>https://bennyse.de/blog/2020-11-27-webseiten-bauen-90er-edition/</id>
+    <content type="html">
+      &lt;p&gt;&amp;quot;Was du als Frontend Developer wissen musst.&amp;quot; - Serverless, GraphQL, React, Vue, Svelte, Angular, Typescript,
+PostCSS, React Native, Stencil, Server Side Rendering, Client Side Rendering, Client site hydration, Progressive Web App,
+Cache Busting, ... Früher war das noch einfacher. Da hatten wir nur HTML und CSS. Und kommen damit bis heute zurecht.&lt;/p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Nah, same as 2011 (and before)&lt;br&gt;&lt;br&gt;1. HTML&lt;br&gt;2. CSS&lt;br&gt;3. JavaScript&lt;br&gt;4. ARIA&lt;br&gt;5. Accessibility &lt;a href=&quot;https://t.co/OE1MySr7tL&quot;&gt;https://t.co/OE1MySr7tL&lt;/a&gt;&lt;/p&gt;&amp;mdash; Adam Silver (@adambsilver) &lt;a href=&quot;https://twitter.com/adambsilver/status/1330783287099404291?ref_src=twsrc%5Etfw&quot;&gt;November 23, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;p&gt;Die 90er waren großartig. Deutschland wurde zum dritten Mal Fußball Weltmeister. Der Manga Naruto erblickte das Licht der Welt.
+ICQ hat mich regelmäßig mit &amp;quot;Oh Oh&amp;quot; erfreut und Platformen wie MySpace waren noch weit entfernt. MySpace? Ach ja... Facebook
+gab es auch noch nicht. Weshalb ich das gut finde? Es gab halt nichts, daher hat man was eigenes erschaffen. Mit Facebook und Co
+hätte ich wohl nie angefangen Webseiten zu bauen. Aber genug alter Erinnerungen. Wie ging das denn nun früher mit den Webseiten?&lt;/p&gt;
+&lt;h2&gt;Komponenten&lt;/h2&gt;
+&lt;p&gt;In der Schule habe ich die grundlegenden HTML Elemente kennenlernen dürfen. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h3&amp;gt;&lt;/code&gt; und so weiter sind Überschriften.
+Mit &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; definierst du einen Absatz. Mit &lt;code&gt;&amp;lt;b&amp;gt;&lt;/code&gt; kannst du Wörter fett gedruckt darstellen, mit &lt;code&gt;&amp;lt;i&amp;gt;&lt;/code&gt; machst
+du sie kursiv und mit &lt;code&gt;&amp;lt;u&amp;gt;&lt;/code&gt; unterstreichst du sie. So oder so ähnlich war wohl die erste Stunde.&lt;/p&gt;
+&lt;p&gt;Meine allererste Webseite sah in etwa so aus:&lt;/p&gt;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Meine Webseite&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;  Hallo, willkommen auf meiner Webseite.&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;br&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;  Mein Name ist Benny und meine Hobbies sind Fußball spielen.&lt;br&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;section class=&quot;bg-white p-2 text-black mb-4&quot; style=&quot;font-family: Times New Roman;&quot;&gt;
+  &lt;!-- &lt;div class=&quot;m-4&quot;&gt; --&gt;
+    &lt;h3 style=&quot;font-size: 1.17em; font-weight: bold;&quot;&gt;Meine Webseite&lt;/h3&gt;
+    &lt;p style=&quot;margin: 1em 0;&quot;&gt;
+      Hallo, willkommen auf meiner Webseite.&lt;br&gt;
+      Mein Name ist &lt;b&gt;Benny&lt;/b&gt; und meine Hobbies sind Fußball spielen.
+    &lt;/p&gt;
+  &lt;!-- &lt;/div&gt; --&gt;
+&lt;/section&gt;
+&lt;p&gt;Das &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; Element war mir zu groß, daher habe ich einfach das &lt;code&gt;&amp;lt;h3&amp;gt;&lt;/code&gt; Element verwendet
+für die Überschrift. Das &lt;code&gt;&amp;lt;br /&amp;gt;&lt;/code&gt; Element ist ein Zeilenumbruch ohne den großen Abstand.&lt;/p&gt;
+&lt;p&gt;Das Thema der zweiten Stunde war dann Styling und Layout. Mit &lt;code&gt;&amp;lt;font&amp;gt;&lt;/code&gt; kannst du die Schriftgröße, die Farbe und sogar die Schriftart verändern.
+Mit &lt;code&gt;&amp;lt;center&amp;gt;&lt;/code&gt; wird Text zentriert und &lt;code&gt;&amp;lt;marquee&amp;gt;&lt;/code&gt; zaubert dir eine Laufschrift auf den Bildschirm. Nicht zu vergessen
+das gute &lt;code&gt;&amp;lt;blink&amp;gt;&lt;/code&gt; Element das Text blinkend darstellt. Ganz wichtig damit du im Tagebuch auf neue Kapitel hinweisen kannst!
+Es gibt übrigens eine native JavaScript Funktion dafür: &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/blink&quot;&gt;&lt;code&gt;String.prototype.blink()&lt;/code&gt;&lt;/a&gt;. Ebenso für &lt;code&gt;bold&lt;/code&gt;, &lt;code&gt;italic&lt;/code&gt; usw.&lt;/p&gt;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;center&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;font&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;orange&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;family&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;Comic Sans&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;24px&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;marquee&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Hallo, Willkommen auf meiner Homepage&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;marquee&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;font&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;center&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Wer mit den teilweise als veraltet markierten (deprecated) Elementen hantieren durfte wird bestimmt gerade ein Schmunzeln
+Gesicht haben. Gern geschehen :-) Wer damit nicht groß geworden ist, sondern mit React, jsx und
+Co, wird hier mit Sicherheit etwas wiedererkennen. Komponenten!&lt;/p&gt;
+&lt;h2&gt;Layout&lt;/h2&gt;
+&lt;p&gt;Nachdem wir Text jetzt bunt und groß und klein machen können, fehlt noch etwas Layout. Oben die Navigation,
+links etwas Inhalt, z. B. meine Hobbies, und rechts einen Chat. Ja! Die coolen Leute hatten einen Chat
+auf ihrer Homepage! UND ein Gästebuch.&lt;/p&gt;
+&lt;p&gt;Navigation oben, kein Problem. Einfach einen Paragraph &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; mit &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; Elementen definieren die zu
+anderen Seiten verweisen. Um noch mehr Abstand nach unten zu haben definieren wir noch zwei oder drei Paragraphen.&lt;/p&gt;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;index.htm&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Startseite&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;hobbies.htm&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Meine Hobbies&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;gaestebuch.htm&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Gästebuch&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Wenn nicht so viel Abstand gewünscht ist, können auch ein oder mehrere &lt;code&gt;&amp;lt;br/&amp;gt;&lt;/code&gt; Elemente
+verwendet werden. Das nimmt etwa die Hälfte des &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; ein in der Höhe.&lt;/p&gt;
+&lt;p&gt;Von Accessibility oder strukturiertem Inhalt und HTML Semantik habe ich damals nichts gewusst.
+Siehe auch die Entscheidung ein &lt;code&gt;&amp;lt;h3&amp;gt;&lt;/code&gt; für die Überschrift zu nehmen, weil der Text mit &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;
+zu groß ist 🙈&lt;/p&gt;
+&lt;p&gt;Ansonsten hätte eine Sache anders ausgesehen: Der Abstand zwischen Navigation oben und Inhalt
+darunter wurde mit Paragraphen gelöst. Heißt Screenreader lesen diese Paraphen vor. Obwohl sie
+ja eigentlich kein Inhalt sind, sondern missbraucht werden für Layout Zwecke. Wie fügt
+man den Abstand nun korrekt hinzu? HTML Elemente können mit einem &lt;code&gt;style&lt;/code&gt; Attribut visuell
+verändert werden. Mehr Abstand nach unten wird z. B. mit &lt;code&gt;&amp;lt;p style=&amp;quot;margin-bottom: 30x&amp;quot;&amp;gt;&lt;/code&gt;
+herbeigezaubert.&lt;/p&gt;
+&lt;p&gt;Etwas spannender wird es jetzt den Inhalt der Seite links zu platzieren und rechts daneben
+den Chat. Naja, spannend, wir haben ja nur eine Möglichkeit: die Tabelle &lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;table&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;tr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- hier den Inhalt einfügen --&gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- und hier der Chat --&gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;tr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;table&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Tabellen Layouts werden heute übrigens immer noch benötigt. Ja, kein Scherz 🙄
+HTML E-Mails müssen weiterhin mit Tabellen Layouts gebaut werden. Wer auch immer
+HTML E-Mails haben will.&lt;/p&gt;
+&lt;p&gt;Ansonsten wird heute das CSS &lt;a href=&quot;https://css-tricks.com/snippets/css/a-guide-to-flexbox/&quot;&gt;flexbox&lt;/a&gt;
+und/oder &lt;a href=&quot;https://css-tricks.com/snippets/css/complete-guide-grid/&quot;&gt;grid&lt;/a&gt; Layout verwendet.
+Das funktioniert dann auch responsive. Also das Layout kann angepasst werden an
+kleine und große Bildschirme.&lt;/p&gt;
+&lt;h2&gt;Ein Hauch von Single Page&lt;/h2&gt;
+&lt;p&gt;Nachdem das Layout steht müssen wir die HTML Datei nur noch mehrmals kopieren.
+Rechtsklick kopieren, Rechtsklick einfügen, Rechtsklick einfügen
+und schon ist das Template drei mal da. Wunderbar schnell und einfach.&lt;/p&gt;
+&lt;p&gt;Nun überall den &lt;code&gt;&amp;lt;!-- hier den Inhalt einfügen --&amp;gt;&lt;/code&gt; Abschnitt entsprechend ergänzen
+und fertig ist die Homepage.&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;index.html&lt;br&gt;hobbies.html&lt;br&gt;gaestebuch.html&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Naja... bei einer kleinen drei Seiten Homepage geht das in der Tat noch mit dem kopieren.
+Bei der Webseite meines Sportvereins war das keine Option mehr.
+Da zeigte sich auch mein Softwareentwickler Gen. Ich war faul und hatte
+keinerlei Lust jedesmal in allen Dateien die Navigation anzufassen,
+sobald eine neue Seite hinzukam.&lt;/p&gt;
+&lt;p&gt;Auf jeden Fall habe ich damals dann meine erste Single Page Application gebaut 👆
+Das bedeutet grob, dass sich Teile des Inhalts ohne kompletten Seitenreload ändern.
+Und das komplett ohne JavaScript. Nein?! Doch! Und zwar mit... Trommelwirbel... &lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt; Elementen.&lt;/p&gt;
+&lt;p&gt;Wir können bei &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; Elementen sagen, &amp;quot;öffne den Link bitte innerhalb meiner Seite, und zwar im iframe&amp;quot;.
+Dazu muss wird am &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; Element das Attribut &lt;code&gt;target&lt;/code&gt; definiert mit dem &lt;code&gt;name&lt;/code&gt; des &lt;code&gt;iframe&lt;/code&gt;.
+Fertig ist die &amp;quot;Single Page Application&amp;quot;.&lt;/p&gt;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token style-attr language-css&quot;&gt;&lt;span class=&quot;token attr-name&quot;&gt; &lt;span class=&quot;token attr-name&quot;&gt;style&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&quot;&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token property&quot;&gt;margin-bottom&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 30px&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- Klick ändert das src Attribut des iframes --&gt;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;startseite.htm&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;inhalt&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Startseite&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;hobbies.htm&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;inhalt&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Meine Hobbies&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;gaestebuch.htm&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;inhalt&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Gästebuch&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;table&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;tr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;iframe&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;startseite.htm&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;inhalt&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;iframe&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- und hier der Chat --&gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;tr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;table&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Kenne die Grundlagen&lt;/h2&gt;
+&lt;p&gt;Das war&#39;s dann auch schon mehr oder weniger. Damals wie heute reicht es vollkommen
+aus die &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element&quot;&gt;grundlegenden HTML Elemente&lt;/a&gt; zu kennen.
+Nun gut... heute sind die Erwartungen an Webseiten etwas höher als damals. Doch auch hier
+reicht es als nächstes in CSS einzusteigen. &lt;a href=&quot;https://css-tricks.com/&quot;&gt;CSS-Tricks&lt;/a&gt; ist dafür
+eine sehr gut Quelle. Wer sich denkt &amp;quot;ich möchte aber auch fancy Animationen haben&amp;quot; dem sei gesagt:
+Da kommt man mit CSS mittlerweile seeeeehr weit (siehe z. B. &lt;a href=&quot;https://css-tricks.com/snippets/css/keyframe-animation-syntax/&quot;&gt;keyframe-animation&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Kennt man sich mit CSS aus und ist sich sicher etwas nicht mehr lösen zu können mit CSS
+dann kommt JavaScript mit ins Spiel. Der Chat zum Beispiel. Der wurde als &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; integriert
+und hat dann Dinge getan die ich damals nicht verstanden habe.&lt;/p&gt;
+&lt;p&gt;Was ich mir selbst noch aneignen muss sind Accessibility und die
+&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA&quot;&gt;ARIA&lt;/a&gt; Regeln. Dieses Thema
+ist in meinem beruflichen Alltag leider nie mit oben auf der must-have Liste.&lt;/p&gt;
+
+    </content>
+  </entry> 
+  <entry>
+    <title></title>
+    <link href="https://bennyse.de/blog/2020-11-25-hello-world/" />
+    <updated>2020-11-25T00:00:00+00:00</updated>
+    <id>https://bennyse.de/blog/2020-11-25-hello-world/</id>
+    <content type="html">
+      &lt;p&gt;🇦🇨
+🇦🇩
+🇦🇪
+🇦🇫
+🇦🇬
+🇦🇮
+🇦🇱
+🇦🇲
+🇦🇴
+🇦🇶
+🇦🇷
+🇦🇸
+🇦🇹
+🇦🇺
+🇦🇼
+🇦🇽
+🇦🇿
+🇧🇦
+🇧🇧
+🇧🇩
+🇧🇪
+🇧🇫
+🇧🇬
+🇧🇭
+🇧🇮
+🇧🇯
+🇧🇱
+🇧🇲
+🇧🇳
+🇧🇴
+🇧🇶
+🇧🇷
+🇧🇸
+🇧🇹
+🇧🇻
+🇧🇼
+🇧🇾
+🇧🇿
+🇨🇦
+🇨🇨
+🇨🇩
+🇨🇫
+🇨🇬
+🇨🇭
+🇨🇮
+🇨🇰
+🇨🇱
+🇨🇲
+🇨🇳
+🇨🇴
+🇨🇵
+🇨🇷
+🇨🇺
+🇨🇻
+🇨🇼
+🇨🇽
+🇨🇾
+🇨🇿
+🇩🇪
+🇩🇬
+🇩🇯
+🇩🇰
+🇩🇲
+🇩🇴
+🇩🇿
+🇪🇦
+🇪🇨
+🇪🇪
+🇪🇬
+🇪🇭
+🇪🇷
+🇪🇸
+🇪🇹
+🇪🇺
+🇫🇮
+🇫🇯
+🇫🇰
+🇫🇲
+🇫🇴
+🇫🇷
+🇬🇦
+🇬🇧
+🇬🇩
+🇬🇪
+🇬🇫
+🇬🇬
+🇬🇭
+🇬🇮
+🇬🇱
+🇬🇲
+🇬🇳
+🇬🇵
+🇬🇶
+🇬🇷
+🇬🇸
+🇬🇹
+🇬🇺
+🇬🇼
+🇬🇾
+🇭🇰
+🇭🇲
+🇭🇳
+🇭🇷
+🇭🇹
+🇭🇺
+🇮🇨
+🇮🇩
+🇮🇪
+🇮🇱
+🇮🇲
+🇮🇳
+🇮🇴
+🇮🇶
+🇮🇷
+🇮🇸
+🇮🇹
+🇯🇪
+🇯🇲
+🇯🇴
+🇯🇵
+🇰🇪
+🇰🇬
+🇰🇭
+🇰🇮
+🇰🇲
+🇰🇳
+🇰🇵
+🇰🇷
+🇰🇼
+🇰🇾
+🇰🇿
+🇱🇦
+🇱🇧
+🇱🇨
+🇱🇮
+🇱🇰
+🇱🇷
+🇱🇸
+🇱🇹
+🇱🇺
+🇱🇻
+🇱🇾
+🇲🇦
+🇲🇨
+🇲🇩
+🇲🇪
+🇲🇫
+🇲🇬
+🇲🇭
+🇲🇰
+🇲🇱
+🇲🇲
+🇲🇳
+🇲🇴
+🇲🇵
+🇲🇶
+🇲🇷
+🇲🇸
+🇲🇹
+🇲🇺
+🇲🇻
+🇲🇼
+🇲🇽
+🇲🇾
+🇲🇿
+🇳🇦
+🇳🇨
+🇳🇪
+🇳🇫
+🇳🇬
+🇳🇮
+🇳🇱
+🇳🇴
+🇳🇵
+🇳🇷
+🇳🇺
+🇳🇿
+🇴🇲
+🇵🇦
+🇵🇪
+🇵🇫
+🇵🇬
+🇵🇭
+🇵🇰
+🇵🇱
+🇵🇲
+🇵🇳
+🇵🇷
+🇵🇸
+🇵🇹
+🇵🇼
+🇵🇾
+🇶🇦
+🇷🇪
+🇷🇴
+🇷🇸
+🇷🇺
+🇷🇼
+🇸🇦
+🇸🇧
+🇸🇨
+🇸🇩
+🇸🇪
+🇸🇬
+🇸🇭
+🇸🇮
+🇸🇯
+🇸🇰
+🇸🇱
+🇸🇲
+🇸🇳
+🇸🇴
+🇸🇷
+🇸🇸
+🇸🇹
+🇸🇻
+🇸🇽
+🇸🇾
+🇸🇿
+🇹🇦
+🇹🇨
+🇹🇩
+🇹🇫
+🇹🇬
+🇹🇭
+🇹🇯
+🇹🇰
+🇹🇱
+🇹🇲
+🇹🇳
+🇹🇴
+🇹🇷
+🇹🇹
+🇹🇻
+🇹🇼
+🇹🇿
+🇺🇦
+🇺🇬
+🇺🇲
+🇺🇳
+🇺🇸
+🇺🇾
+🇺🇿
+🇻🇦
+🇻🇨
+🇻🇪
+🇻🇬
+🇻🇮
+🇻🇳
+🇻🇺
+🇼🇫
+🇼🇸
+🇽🇰
+🇾🇪
+🇾🇹
+🇿🇦
+🇿🇲
+🇿🇼
+🏴󠁧󠁢󠁥󠁮󠁧󠁿
+🏴󠁧󠁢󠁳󠁣󠁴󠁿
+🏴󠁧󠁢󠁷󠁬󠁳󠁿&lt;/p&gt;
+
+    </content>
+  </entry>
+</feed>
