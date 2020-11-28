@@ -19,14 +19,21 @@
     </script>
   </head>
   <body
-    class="bg-gray-900 text-gray-300 pb-16 sm:pb-24"
+    class="bg-gray-900 text-gray-300 flex flex-col"
     :class="{ 'no-scroll': menu === true && !sm }"
     x-data="{ menu: false, sm: smScreen() }"
     x-on:resize.window.passive="sm = smScreen()"
   >
-    <header class="mx-auto max-w-screen-md">{% include 'header.html' %}</header>
-    <main class="pt-12 mx-auto max-w-screen-md px-4">
-      {% block content %} {% endblock %}
-    </main>
+    <div class="min-h-screen pb-16">
+      <header class="mx-auto max-w-screen-md w-full">
+        {% include 'header.html' %}
+      </header>
+      <main class="pt-12 mx-auto max-w-screen-md w-full px-4">
+        {% block content %} {% endblock %}
+      </main>
+    </div>
+    <footer class="mx-auto max-w-screen-md px-4 w-full">
+      {% include 'footer.njk' %}
+    </footer>
   </body>
 </html>
