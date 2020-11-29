@@ -1,7 +1,19 @@
 {% extends "_layout.njk" %} {% block css %}
 <link rel="stylesheet" href="/css/blog-style.css" />
 <link rel="stylesheet" href="/css/syntax-highlighting.css" />
-{% endblock %} {% block content %}
+{% endblock %} {% block content %} {% if draft %}
+<div class="fixed top-0 left-0 right-0 pointer-events-none">
+  <div
+    class="w-full flex justify-between px-4 py-2 bg-red-500 bg-opacity-50 text-black font-bold"
+  >
+    <span>DRAFT</span>
+    <span>DRAFT</span>
+    <span>DRAFT</span>
+    <span>DRAFT</span>
+    <span>DRAFT</span>
+  </div>
+</div>
+{% endif %}
 
 <article class="blog-article">
   <small class="block mb-3 text-xxs text-gray-300 text-opacity-30"

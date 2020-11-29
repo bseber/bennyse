@@ -4,6 +4,8 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const striptags = require("striptags");
 const markdown = require("markdown-it")();
 
+const prod = process.env.NODE_ENV === "production";
+
 const EXCERPT_SEPARATOR = "<!-- more -->";
 
 const markdownToHtml = (text) => markdown.render(text);
@@ -17,6 +19,9 @@ function readingTime(article) {
   }
   return `Lesezeit etwa 1 Minute`;
 }
+
+const not = (fn) => (...args) => !fn(...args);
+const isDraft = (post) => Boolean(post.data.draft);
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats(["md", "njk", "png"]);
@@ -42,7 +47,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("readingTime", readingTime);
 
   eleventyConfig.addCollection("blogposts", function (collection) {
-    return collection.getFilteredByGlob("./src/blog/*.md").reverse();
+    const allBlogPosts = collection
+      .getFilteredByGlob("./src/blog/*.md")
+      .reverse();
+
+    return prod ? allBlogPosts.filter(not(isDraft)) : allBlogPosts;
   });
 
   return {
